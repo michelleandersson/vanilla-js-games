@@ -29,7 +29,7 @@ function win(user, computer) {
     const winColor = "WIN!".fontcolor("#4dcc7d"); 
     result_p.innerHTML = `${convertToWord(user)} beats ${convertToWord(computer)}. You ${winColor} 🔥` 
     document.getElementById(user).classList.add('green-glow'); 
-    setTimeout(function() {document.getElementById(user).classList.remove('green-glow'); }, 300); 
+    setTimeout(() => document.getElementById(user).classList.remove('green-glow'), 300); 
 }
 
 function lose(user, computer) {
@@ -41,7 +41,7 @@ function lose(user, computer) {
     const loseColor = "LOST".fontcolor("#fc121b"); 
     result_p.innerHTML = `${convertToWord(user)} loses to ${convertToWord(computer)}. You ${loseColor} 👻` 
     document.getElementById(user).classList.add('red-glow'); 
-    setTimeout(function() {document.getElementById(user).classList.remove('red-glow'); }, 300); 
+    setTimeout(() => document.getElementById(user).classList.remove('red-glow'), 300); 
 }
 
 function draw(user, computer) {
@@ -51,7 +51,7 @@ function draw(user, computer) {
     // const smallCompWord = "comp".fontsize(3); 
     result_p.innerHTML = `${convertToWord(user)} equals ${convertToWord(computer)}. It's a DRAW 🤷‍♀️` 
     document.getElementById(user).classList.add('gray-glow'); 
-    setTimeout(function() {document.getElementById(user).classList.remove('gray-glow'); }, 300); 
+    setTimeout(() => document.getElementById(user).classList.remove('gray-glow'), 300); 
 }
 
 function game(userChoice) {
