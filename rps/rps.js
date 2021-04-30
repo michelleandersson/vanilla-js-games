@@ -8,18 +8,20 @@ const rock_div = document.querySelector("#r");
 const paper_div = document.querySelector("#p"); 
 const scissors_div = document.querySelector("#s"); 
 const lizard_div = document.querySelector("#l"); 
-const spock_div = document.querySelector("#sp"); 
+const spock_div = document.querySelector("#c"); 
 
 function getComputerChoice() {
-    const choices = ['r', 'p', 's']; 
-    const randomNumber = Math.floor(Math.random() * 3); 
+    const choices = ['r', 'p', 's', 'l', 'c']; 
+    const randomNumber = Math.floor(Math.random() * 5); 
     return choices[randomNumber]; 
 }
 
 function convertToWord(letter) {
     if (letter === "r") return "Rock"; 
     if (letter === "p") return "Paper"; 
-    return "Scissors"; 
+    if (letter === "s") return "Scissors"; 
+    if (letter === "l") return "Lizard"; 
+    return "Spock";  
 }
 
 function win(user, computer) {
@@ -56,16 +58,32 @@ function game(userChoice) {
         case "rs": 
         case "pr": 
         case "sp": 
+        case "rl":
+        case "lc":
+        case "cs":
+        case "sl":
+        case "lp":
+        case "pc":
+        case "cr":
             win(userChoice, computerChoice); 
             break; 
         case "rp": 
         case "ps": 
         case "sr": 
+        case "lr":
+        case "cl":
+        case "sc":
+        case "ls":
+        case "pl":
+        case "cp":
+        case "rc":
             lose(userChoice, computerChoice); 
             break; 
         case "rr":
         case "pp": 
         case "ss": 
+        case "ll": 
+        case "cc":
             draw(userChoice, computerChoice); 
             break; 
     }
