@@ -102,6 +102,14 @@ function main() {
     scissors_div.addEventListener('click', function() {
         game("s"); 
     }); 
+
+    lizard_div.addEventListener('click', function() {
+        game("l"); 
+    });
+
+    spock_div.addEventListener('click', function() {
+        game("c"); 
+    });
 }
 
 main(); 
