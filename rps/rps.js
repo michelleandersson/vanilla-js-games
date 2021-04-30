@@ -7,6 +7,8 @@ const result_p = document.querySelector(".result > p");
 const rock_div = document.querySelector("#r"); 
 const paper_div = document.querySelector("#p"); 
 const scissors_div = document.querySelector("#s"); 
+const lizard_div = document.querySelector("#l"); 
+const spock_div = document.querySelector("#sp"); 
 
 function getComputerChoice() {
     const choices = ['r', 'p', 's']; 
@@ -24,8 +26,6 @@ function win(user, computer) {
     userScore++; 
     userScore_span.innerHTML = userScore; 
     computerScore_span.innerHTML = computerScore; 
-    // const smallUserWord = "user".fontsize(3); 
-    // const smallCompWord = "comp".fontsize(3); 
     const winColor = "WIN!".fontcolor("#4dcc7d"); 
     result_p.innerHTML = `${convertToWord(user)} beats ${convertToWord(computer)}. You ${winColor} 🔥` 
     document.getElementById(user).classList.add('green-glow'); 
@@ -35,9 +35,7 @@ function win(user, computer) {
 function lose(user, computer) {
     computerScore++; 
     userScore_span.innerHTML = userScore; 
-    computerScore_span.innerHTML = computerScore; 
-    // const smallUserWord = "user".fontsize(3); 
-    // const smallCompWord = "comp".fontsize(3); 
+    computerScore_span.innerHTML = computerScore;  
     const loseColor = "LOST".fontcolor("#fc121b"); 
     result_p.innerHTML = `${convertToWord(user)} loses to ${convertToWord(computer)}. You ${loseColor} 👻` 
     document.getElementById(user).classList.add('red-glow'); 
@@ -47,8 +45,6 @@ function lose(user, computer) {
 function draw(user, computer) {
     userScore_span.innerHTML = userScore; 
     computerScore_span.innerHTML = computerScore; 
-    // const smallUserWord = "user".fontsize(3); 
-    // const smallCompWord = "comp".fontsize(3); 
     result_p.innerHTML = `${convertToWord(user)} equals ${convertToWord(computer)}. It's a DRAW 🤷‍♀️` 
     document.getElementById(user).classList.add('gray-glow'); 
     setTimeout(() => document.getElementById(user).classList.remove('gray-glow'), 300); 
