@@ -83,3 +83,46 @@ function gameTurn () {
        }, 200);  
    }
 }; 
+
+function one() {
+    if (noice) {
+        let audio = document.getElementById("clip1"); 
+        audio.play(); 
+    }
+    noice = true; 
+    topLeft.style.backgroundColor = "lightgreen"; 
+};
+
+function two() {
+    if (noice) {
+        let audio = document.getElementById("clip2"); 
+        audio.play(); 
+    }
+    noice = true; 
+    topRight.style.backgroundColor = "tomato"; 
+};
+
+function three() {
+    if (noice) {
+        let audio = document.getElementById("clip3"); 
+        audio.play(); 
+    }
+    noice = true; 
+    bottomLeft.style.backgroundColor = "yellow"; 
+};
+
+function four() {
+    if (noice) {
+        let audio = document.getElementById("clip4"); 
+        audio.play(); 
+    }
+    noice = true; 
+    bottomRight.style.backgroundColor = "lightskyblue"; 
+};
+
+function clearColor() {
+    topLeft.style.backgroundColor = "darkgreen"; 
+    topRight.style.backgroundColor = "darkred"; 
+    bottomLeft.style.backgroundColor = "goldenrod"; 
+    bottomRight.style.backgroundColor = "darkblue"; 
+}
