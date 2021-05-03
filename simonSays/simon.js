@@ -127,6 +127,13 @@ function clearColor() {
     bottomRight.style.backgroundColor = "darkblue"; 
 }
 
+function flashColor() {
+    topLeft.style.backgroundColor = "lightgreen"; 
+    topRight.style.backgroundColor = "tomato"; 
+    bottomLeft.style.backgroundColor = "yellow"; 
+    bottomRight.style.backgroundColor = "lightskyblue"; 
+}
+
 topLeft.addEventListener('click', (event) => {
     if (on) {
         playerOrder.push(1); 
@@ -215,4 +222,11 @@ function check() {
         turnCounter.innerHTML = turn; 
         intervalId = setInterval(gameTurn, 800); 
     }
+}; 
+
+function winGame() {
+    flashColor(); 
+    turnCounter.innerHTML = "WIN!"; 
+    on = false; 
+    win = true; 
 }; 
