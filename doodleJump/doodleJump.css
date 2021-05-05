@@ -10,7 +10,7 @@
 .doodler {
   width: 60px;
   height: 85px;
-  background-color: red;
+  background-image: url(psyduck3.png);
   position: absolute;
 }
 

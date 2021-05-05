@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let leftTimerId; 
     let rightTimerId; 
     let score = 0; 
+    let audio = new Audio('quack.mp3'); 
     
 
     function createDoodler() {
@@ -97,6 +98,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 ) {
                     console.log('landed')
                     startPoint = doodlerBottomSpace; 
+                    audio.play(); 
                     jump(); 
                 }
                 
