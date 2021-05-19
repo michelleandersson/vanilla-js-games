@@ -84,8 +84,6 @@ document.addEventListener('DOMContentLoaded' , () => {
     function gameOver() {
         clearInterval(gameTimerId)
         isGameOver = true; 
-         
-         
         scoreBoard.removeAttribute("hidden"); 
         scoreBoard.innerHTML = score; 
         document.removeEventListener('keyup', control); 

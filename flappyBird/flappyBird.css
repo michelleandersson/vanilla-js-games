@@ -53,22 +53,25 @@ body {
 }
 
 .bird {
-  background-color: yellow;
+  /* background-color: yellow; */
+  background-image: url(pngegg1.png);
   position: absolute;
   height: 45px;
   width: 60px;
 }
 
 .obstacle {
-  background-color: green;
+  /* background-color: green; */
+  background-image: url(pokeballs2.png);
   width: 60px;
   height: 300px;
   position: absolute;
 }
 
 .topObstacle {
-  background-color: green;
-  /* transform: rotate(180deg); */
+  /* background-color: green; */
+  background-image: url(pokeballs2.png);
+  transform: rotate(180deg);
   width: 60px;
   height: 300px;
   position: absolute;
