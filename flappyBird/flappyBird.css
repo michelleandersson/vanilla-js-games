@@ -62,7 +62,7 @@ body {
 
 .obstacle {
   /* background-color: green; */
-  background-image: url(pokeballs2.png);
+  background-image: url(flappybird-pipe.png);
   width: 60px;
   height: 300px;
   position: absolute;
@@ -70,7 +70,7 @@ body {
 
 .topObstacle {
   /* background-color: green; */
-  background-image: url(pokeballs2.png);
+  background-image: url(flappybird-pipe.png);
   transform: rotate(180deg);
   width: 60px;
   height: 300px;
