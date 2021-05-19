@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         //keyCode = javascript method for calling keyboard keys
         //32 = keycode for spacebar
         //this function ensures that only spacebar makes the bird jump
-        if (e.keyCode === 32 || touchend) {
+        if (e.keyCode === 32 || "touchend") {
             jump(); 
         }
     }
