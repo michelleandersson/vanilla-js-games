@@ -29,6 +29,10 @@ document.addEventListener('DOMContentLoaded' , () => {
         }
     }
 
+    function mobileControl() {
+        jump()
+    }
+
     function jump() {
         if (birdBottom < 500) birdBottom += 50; 
         bird.style.bottom = birdBottom + 'px'; 
@@ -36,7 +40,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     }
 
     document.addEventListener('keyup', control); 
-    document.addEventListener('touchend', control); 
+    document.addEventListener('touchend', mobileControl); 
 
     function generateObstacle() {
         let obstacleLeft = 500; 
