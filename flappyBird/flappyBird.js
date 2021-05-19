@@ -45,9 +45,15 @@ document.addEventListener('DOMContentLoaded' , () => {
         function moveObstacle() {
             obstacleLeft -= 2; 
             obstacle.style.left = obstacleLeft + 'px'; 
+
+            if(obstacleLeft === -60) {
+                clearInterval(timerID); 
+                gameDisplay.removeChild(obstacle); 
+            } 
         }
 
         let timerID = setInterval(moveObstacle, 20); 
+        setTimeout(generateObstacle, 3000); 
     }
     generateObstacle(); 
 })
