@@ -2,12 +2,15 @@ document.addEventListener('DOMContentLoaded' , () => {
    const bird = document.querySelector('.bird');
    const gameDisplay = document.querySelector('.game-container'); 
    const ground = document.querySelector('.ground'); 
+   let scoreBoard = document.querySelector('.scoreDisplay');
+   scoreBoard.setAttribute("hidden", ""); 
 
    let birdLeft = 220; 
-   let birdBottom = 100; 
+   let birdBottom = 250; 
    let gravity = 2; 
    let isGameOver = false; 
    let gap = 430; 
+   let score = -1; 
 
    function startGame() {
        birdBottom -= gravity; 
@@ -43,6 +46,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         if (!isGameOver) {
             obstacle.classList.add('obstacle'); 
             topObstacle.classList.add('topObstacle'); 
+            score ++;  
         } 
         gameDisplay.appendChild(obstacle); 
         gameDisplay.appendChild(topObstacle); 
@@ -60,6 +64,7 @@ document.addEventListener('DOMContentLoaded' , () => {
                 clearInterval(timerID); 
                 gameDisplay.removeChild(obstacle); 
                 gameDisplay.removeChild(topObstacle); 
+                   
             } 
             if(
                 obstacleLeft > 200 && obstacleLeft < 280 && birdLeft === 220 &&
@@ -79,6 +84,12 @@ document.addEventListener('DOMContentLoaded' , () => {
     function gameOver() {
         clearInterval(gameTimerId)
         isGameOver = true; 
+         
+         
+        scoreBoard.removeAttribute("hidden"); 
+        scoreBoard.innerHTML = score; 
         document.removeEventListener('keyup', control); 
+        
+        console.log('score = ' +  score); 
     }
 })
