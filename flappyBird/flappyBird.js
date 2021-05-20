@@ -19,20 +19,17 @@ document.addEventListener('DOMContentLoaded' , () => {
    }
     let gameTimerId = setInterval(startGame, 20); 
 
-    function control(e) {
-        //e = event
-        //keyCode = javascript method for calling keyboard keys
-        //32 = keycode for spacebar
-        //this function ensures that only spacebar makes the bird jump
-        if (e.keyCode === 32) {
-            jump(); 
-        }
-    }
+    // function control(e) {
+    //     //e = event
+    //     //keyCode = javascript method for calling keyboard keys
+    //     //32 = keycode for spacebar
+    //     //this function ensures that only spacebar makes the bird jump
+    //     if (e.keyCode === 32) {
+    //         jump(); 
+    //     }
+    // }
 
-    //try to add mobile controls
-    function mobileControl() {
-        jump()
-    }
+    document.addEventListener('keyup', jump); 
 
     function jump() {
         if (birdBottom < 500) birdBottom += 50; 
@@ -40,8 +37,8 @@ document.addEventListener('DOMContentLoaded' , () => {
         console.log(birdBottom); 
     }
 
-    document.addEventListener('keyup', control); 
-    document.addEventListener('touchend', mobileControl); 
+    // document.addEventListener('keyup', control); 
+     
 
     function generateObstacle() {
         let obstacleLeft = 500; 
@@ -92,7 +89,8 @@ document.addEventListener('DOMContentLoaded' , () => {
         isGameOver = true; 
         scoreBoard.removeAttribute("hidden"); 
         scoreBoard.innerHTML = score; 
-        document.removeEventListener('keyup', control); 
+        document.removeEventListener('keyup', jump); 
+        
         
         console.log('score = ' +  score); 
     }
