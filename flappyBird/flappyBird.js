@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         }
     }
 
+    //try to add mobile controls
     function mobileControl() {
         jump()
     }
