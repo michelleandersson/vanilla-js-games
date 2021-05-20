@@ -30,6 +30,7 @@ document.addEventListener('DOMContentLoaded' , () => {
     // }
 
     document.addEventListener('keyup', jump); 
+    document.addEventListener('touchend', jump); 
 
     function jump() {
         if (birdBottom < 500) birdBottom += 50; 
@@ -90,6 +91,7 @@ document.addEventListener('DOMContentLoaded' , () => {
         scoreBoard.removeAttribute("hidden"); 
         scoreBoard.innerHTML = score; 
         document.removeEventListener('keyup', jump); 
+        document.removeEventListener('touchend', jump); 
         
         
         console.log('score = ' +  score); 
